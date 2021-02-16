@@ -4,7 +4,7 @@ class BookmarkManager < Sinatra::Base
   enable :sessions
 
   get '/' do
-    'Hello World!'
+    'Bookmark Manager'
   end
 
   # start the server if ruby file executed directly
