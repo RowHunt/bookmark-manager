@@ -1,5 +1,5 @@
-require 'bookmark'
-require 'database_helpers'
+require './lib/bookmark'
+require './spec/database_helpers'
 
 describe '.all' do
   it 'returns a list of bookmarks' do

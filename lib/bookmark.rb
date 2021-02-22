@@ -19,8 +19,8 @@ class Bookmark
     result = connection.exec("SELECT * FROM bookmarks;")
     result.map do |bookmark| 
       Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url']) 
+    end
   end
-
   def self.create(url:, title:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
